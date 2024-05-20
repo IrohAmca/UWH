@@ -30,7 +30,7 @@ func save_data() {
 			if err == nil {
 				ant_count = count
 				if ant_count >= 1 {
-					ant_flag=true
+					ant_flag = true
 				}
 			}
 		}
@@ -58,6 +58,7 @@ func save_data() {
 	}
 	Contains_Error(start_flag, end_flag, connect_flag, comment_flag, ant_flag)
 	True_Format_Error()
+	Connection_Error()
 }
 
 func read_file(file_path string) {
@@ -93,7 +94,7 @@ func loop_handler(room string, road []string) bool {
 	return true
 }
 func find_road_recursive(room string, road []string, roads *[][]string) {
-	if room == end_room{
+	if room == end_room {
 		*roads = append(*roads, append(road, room))
 		return
 	}
@@ -175,7 +176,7 @@ func is_overlapping(path []string, paths [][]string) bool {
 	return false
 }
 
-func sort_paths_by_length(paths [][]string) [][]string{
+func sort_paths_by_length(paths [][]string) [][]string {
 	for i := 0; i < len(paths); i++ {
 		for j := i + 1; j < len(paths); j++ {
 			if len(paths[i]) > len(paths[j]) {
