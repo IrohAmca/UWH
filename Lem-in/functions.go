@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func seperate_rows() {
+func separate_rows() {
 	var temp string
 	for _, row := range strings.Split(content, "\n") {
 		if row != "" {
@@ -18,7 +18,7 @@ func seperate_rows() {
 }
 
 func save_data() {
-	seperate_rows()
+	separate_rows()
 	start_flag := false
 	end_flag := false
 	connect_flag := false
