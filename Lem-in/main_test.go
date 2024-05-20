@@ -244,7 +244,7 @@ func TestQualified(t *testing.T) {
 		if step > excepted[i] {
 			t.Errorf("%s map number of steps is %d, expected %d", path, step, excepted[i])
 		} else {
-			fmt.Printf("Qualified Tests Map %s Passed, Score: %d Excepted %d", path[5:14],step, excepted[i])
+			fmt.Printf("Qualified Tests Map %s Passed, Score: %d Excepted %d", path[5:14], step, excepted[i])
 			fmt.Println()
 		}
 		remove_all_variables()
